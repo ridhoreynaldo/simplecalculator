@@ -19,6 +19,64 @@
     <title>Hello World</title>
 </head>
     <body>
+	        <!--CEK DISABLE JAVASCRIPT-->
+    <noscript>
+        <div id="nosc" style="text-align:center"><b style="color:red;">AKTIFKAN JAVASCRIPT UNTUK MELIHAT
+                WEBSITE</b></br>
+            <small style="color:blue">Atau gunakan browser: Google Chrome / Firefox</small>
+        </div>
+    </noscript>
+    <!---->
+
+    <!--ADBLOCKER DETECt-->
+    <!--googleon: all-->
+    <script async>
+    if (window.DHAntiAdBlocker === undefined) {
+        // if AdBlocker Detected
+
+        // Disable Mouse Right Click
+        jQuery(document).ready(function() {
+            // Disable full page
+            jQuery(document).bind("contextmenu", function(e) {
+                return false;
+            });
+        });
+        jQuery("html, body").css({
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "height": "100%",
+            "width": "100%"
+        });
+
+        jQuery(document).ready(function() {
+            jQuery.confirm({
+                theme: '1dada49a0b28bc51caf0',
+                title: 'Ad Block terdeteksi',
+                content: '<p>Please support us by disabling your adblocker or whitelist<strong> localhost</strong> from your adblocker. And <strong>press</strong> the refresh button below Thanks!</p> <p>&nbsp;</p> <p>Mohon matikan Adblocker anda, atau masukan <strong>localhost</strong> ke dalam daftar Putih adblocker Dan tekan tombol refresh dibawah.  Terimakasih</p>',
+                type: 'green',
+                backgroundDismiss: false,
+                backgroundDismissAnimation: 'shake',
+                draggable: false,
+                useBootstrap: false,
+                boxWidth: '700px',
+                escapeKey: true,
+                buttons: {
+                    refresh: {
+                        text: 'Refresh',
+                        btnClass: 'btn-red',
+                        action: function() {
+                            location.reload(true);
+                            return false;
+                        }
+                    },
+                }
+            });
+        });
+    } else {
+        // if AdBlocker not Detected
+    }
+    </script>
+<!--CLOSE GLOBAL FUNCTION-->
         <script type ="text/javascript">
         var kalkulasi = (a,op,b) =>{
             if (op == "+")
